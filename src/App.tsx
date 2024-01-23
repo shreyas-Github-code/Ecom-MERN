@@ -1,8 +1,9 @@
-//42
+//56
 
 import React, { lazy, Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Loading from './Components/Loading';
+import Header from './Components/header';
 
 const Home = lazy(() => import('./Pages/Home'));
 const Search = lazy(() => import('./Pages/Search'));
@@ -27,6 +28,7 @@ const App = () => {
   return (
     <Router>
       {/* Header */}
+      <Header />
       <Suspense fallback={<Loading />}>
         <Routes>
           <Route path="/" element={<Home />} />
