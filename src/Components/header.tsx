@@ -7,11 +7,13 @@ const user = { _id: "gdfg", role: 'admin' };
 const Header = () => {
     
     const [isDialogOpen, setDialogOpen] = useState(false);
+
+    const logoutHandler=()=>{setDialogOpen(false)};
     return (
         <nav className='header'>
-            <Link to={'/'}>Home</Link>
-            <Link to={'/search'}><FaSearch /></Link>
-            <Link to={'/cart'}><FaShoppingBag /></Link>
+            <Link onClick={()=>{setDialogOpen(false)}} to={'/'}>Home</Link>
+            <Link onClick={()=>{setDialogOpen(false)}} to={'/search'}><FaSearch /></Link>
+            <Link onClick={()=>{setDialogOpen(false)}} to={'/cart'}><FaShoppingBag /></Link>
 
             {user?._id ? (
                 <>
@@ -25,7 +27,7 @@ const Header = () => {
                                     <Link to='/admin/dashboard'>Admin</Link>
                                 )}
                                 <Link to="/orders">Orders</Link>
-                                <button >
+                                <button onClick={()=>{logoutHandler()}}>
                                     <FaSignOutAlt />
                                 </button>
                             </div>
