@@ -17,7 +17,7 @@ const ProductCard: React.FC<ProductsProps> = ({ productId, photo, name, price, s
     <div className="product-card">
       <img src={photo} alt={name} />
       <p>{name}</p>
-      <span>{price}</span>
+      <span>₹{price}</span>
       <div>
         <button onClick={() => handler()} title={`Add ${name} to Cart`}>
           <FaPlus />

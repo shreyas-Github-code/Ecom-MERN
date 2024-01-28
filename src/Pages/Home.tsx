@@ -3,7 +3,7 @@ import ProductCard from '../Components/product-card';
 
 const Home = () => {
 
-  const addToCartHandler = () => { };
+  const addToCartHandler = () => { alert("hi") };
 
   return (
     <div className='home'>
@@ -22,6 +22,14 @@ const Home = () => {
       <main>
         <ProductCard
           productId='rwer'
+          name='iphone'
+          price={222}
+          handler={addToCartHandler}
+          stock={232}
+          photo='https://tse1.mm.bing.net/th?id=OIP.AGy2OUk-ox8DxAmRRRa4rQHaHa&pid=Api&P=0&h=180' />
+
+        <ProductCard
+          productId='rwfer'
           name='iphone'
           price={222}
           handler={addToCartHandler}
