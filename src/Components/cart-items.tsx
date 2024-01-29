@@ -16,7 +16,7 @@ const Cartitems = ({cartItem}:CartitemsProps) => {
 
     const { productId,photo,name,price,quantity}=cartItem;
   return (
-    <div className="cart-items">
+    <div className="cart-item">
         <img src={photo} alt={name} />
         <article><Link to={`/prodcut/${productId}`}>{name}</Link></article>
         <span>₹{price}</span>
@@ -27,7 +27,7 @@ const Cartitems = ({cartItem}:CartitemsProps) => {
             <button>+</button>
         </div>
 
-        <div><button><FiTrash /></button></div>
+        <button><FiTrash /></button>
     </div>
   )
 }

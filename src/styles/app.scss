@@ -16,7 +16,8 @@
   }
 
   body{
-    user-select: none;
+    -webkit-user-select: none;
+    user-select:none;
   }
   
   $color1:white;
@@ -36,7 +37,9 @@
 
   @import "home";
   @import "cart.scss";
-  
+  @import "shipping.scss";
+  @import "login.scss";
+  @import "search.scss";
   @import "admin-styles/dashboard";
   @import "admin-styles/products";
   @import "admin-styles/chart";
@@ -81,7 +84,11 @@ padding: 1rem;
   }
 }
 
-
+.heading{
+  @include heading;
+  margin: 2rem  0;
+  text-align: center
+}
 
 
 

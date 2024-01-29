@@ -5,9 +5,12 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Loading from './Components/Loading';
 import Header from './Components/header';
 
+
 const Home = lazy(() => import('./Pages/Home'));
 const Search = lazy(() => import('./Pages/Search'));
 const Cart = lazy(() => import('./Pages/Cart'));
+const Shipping = lazy(() => import('./Pages/Shipping'));
+const Login = lazy(() => import('./Pages/login'));
 
 // Admin
 const Dashboard = lazy(() => import('./pages/admin/dashboard'));
@@ -34,6 +37,15 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/search" element={<Search />} />
           <Route path="/cart" element={<Cart />} />
+
+             {/* Not LoggedIn user routes */}
+          <Route path="/login" element={<Login />} />
+
+          {/* LoggedIn user routes */}
+          <Route>
+
+          <Route path="/shipping" element={<Shipping />} />
+          </Route>
 
           {/* Admin routes */}
           {/* <Route
