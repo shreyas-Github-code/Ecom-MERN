@@ -41,7 +41,7 @@ const column: Column<DataType>[] = [
 ];
 const Orders = () => {
 
-   
+
 
     const [rows] = useState<DataType[]>([ // Corrected the state initialization
         {
